@@ -15,4 +15,4 @@ Product Manager: Alessandro
 
 Frontend: Mariana
 
-Backend: Aszha, Ashley, Tinsay
+Backend: Ahzsa, Ashley, Tinsay
