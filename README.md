@@ -9,10 +9,10 @@ Team Members: Ashley Brea, Alessandro Espinosa, Ahsza Strange, Daniela Velazquez
 
 ### Roles
 --------------------------
-Design Team: Daniela
+Design Team: Daniela, Nathan
 
 Product Manager: Alessandro
 
-Frontend: Mariana
+Frontend: Mariana, Tinsay
 
 Backend: Ahzsa, Ashley, Tinsay
