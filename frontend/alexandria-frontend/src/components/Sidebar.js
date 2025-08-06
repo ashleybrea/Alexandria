@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const initialMentees = [
   {
@@ -13,11 +14,12 @@ const initialMentees = [
     since: 'May 2019',
     role: 'Product Marketing Intern',
     badge: 'Microsoft Teams',
-    avatar: '',
+    avatar: ''
   },
 ];
 
 function Sidebar() {
+  const navigate = useNavigate();
   const [mentees, setMentees] = useState(initialMentees);
   const [editing, setEditing] = useState(false);
 
@@ -65,7 +67,7 @@ function Sidebar() {
             key={idx}
             style={{ cursor: 'pointer', border: '1px solid #e0e6ed', borderRadius: 12, marginBottom: 8, background: '#f9fbfd', boxShadow: '0 1px 4px rgba(74,144,226,0.04)' }}
             tabIndex={0}
-            onClick={() => !editing && alert(`Viewing profile for ${mentee.name}`)}
+            onClick={() => !editing && navigate(`/mentee/${mentee.name}`)}
           >
             <div className="mentee-avatar" style={{ background: '#ddd', width: 50, height: 50, borderRadius: '50%' }}></div>
             <div className="mentee-info">

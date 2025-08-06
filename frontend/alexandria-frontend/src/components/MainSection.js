@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const MEETING_FREQUENCY_OPTIONS = [
   'Weekly', 'Bi-Weekly', 'Monthly', 'Quarterly', 'Flexible', 'On Demand', 'Every Other Month', 'Annually', 'As Needed', 'No Preference'
@@ -39,6 +40,12 @@ const editBtnStyle = {
 };
 
 function MainSection() {
+  const navigate = useNavigate();
+  
+  const handleLogout = () => {
+    // Optional: Clear any user state, localStorage, etc.
+    navigate('/');
+  };
   // About section state
   const [aboutEditing, setAboutEditing] = useState(false);
   const [about, setAbout] = useState(
@@ -581,6 +588,27 @@ function MainSection() {
           </div>
         )}
       </div>
+      <div style={{ textAlign: 'center', marginTop: '40px' }}>
+      <button
+        onClick={handleLogout}
+        style={{
+          padding: '10px 24px',
+          backgroundColor: '#e74c3c',
+          color: '#fff',
+          border: 'none',
+          borderRadius: '25px',
+          fontSize: '16px',
+          fontWeight: 'bold',
+          cursor: 'pointer',
+          boxShadow: '0 2px 6px rgba(0, 0, 0, 0.1)',
+          transition: 'background 0.3s ease',
+        }}
+        onMouseOver={(e) => (e.target.style.backgroundColor = '#c0392b')}
+        onMouseOut={(e) => (e.target.style.backgroundColor = '#e74c3c')}
+      >
+        Log Out
+      </button>
+    </div>
     </div>
   );
 }
