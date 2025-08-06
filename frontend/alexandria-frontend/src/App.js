@@ -173,7 +173,7 @@ function App() {
 
         {/* mentor static page */}
         <Route
-          path="/mentor/The weekend"
+          path="/mentor/The weeknd"
           element={<MentorProfilePage mentor={mentor1} />}
         />
 

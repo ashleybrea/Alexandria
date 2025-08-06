@@ -3,19 +3,12 @@ import { useNavigate } from 'react-router-dom';
 
 const initialMentors = [
   {
-    name: 'The weekend',
-    since: 'June 2025',
+    name: 'The weeknd',
+    since: 'June 2018',
     role: 'Product Marketing Director',
     badge: 'Microsoft Teams',
     avatar: '',
   },
-  // {
-  //   name: 'Alex Hamilton',
-  //   since: 'May 2019',
-  //   role: 'Product Marketing Intern',
-  //   badge: 'Microsoft Teams',
-  //   avatar: '',
-  // },
 ];
 
 function Sidebar() {
