@@ -1,0 +1,130 @@
+/* Wrapper for the login screen */
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to bottom, #2ec4f3, #6e9efb);
+  box-sizing: border-box;
+}
+
+/* White login form card */
+.container-login {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 50px 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+/* Headings */
+.container h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e1e1e;
+  margin: 0 0 10px;
+}
+
+.container p {
+  color: #4f4f4f;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+/* Input field containers */
+.input-group {
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 16px 45px 16px 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Extra helper text below inputs */
+.input-group small {
+  display: block;
+  color: #888;
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+/* Password eye toggle button */
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: #007bff;
+}
+
+/* Login button */
+.login-btn {
+  width: 100%;
+  background: #007bff;
+  color: white;
+  padding: 16px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.login-btn:hover {
+  background: #0056c7;
+}
+
+/* Help link below button */
+.help-link {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 15px;
+}
+
+.help-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.help-link a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .container {
+    padding: 40px 25px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+    padding: 14px;
+  }
+
+  .container h2 {
+    font-size: 24px;
+  }
+}
