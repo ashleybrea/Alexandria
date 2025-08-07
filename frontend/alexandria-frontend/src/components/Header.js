@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
 function Header() {
-  const [bannerUrl, setBannerUrl] = useState(process.env.PUBLIC_URL + '/banner-sample.jpg');
+  const [bannerUrl, setBannerUrl] = useState(process.env.PUBLIC_URL + '/banner.png');
   const fileInputRef = useRef(null);
 
   const handleBannerChange = (e) => {
