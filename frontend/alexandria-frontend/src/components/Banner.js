@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 
-function Header() {
-  const [bannerUrl, setBannerUrl] = useState(process.env.PUBLIC_URL + '/banner-sample.jpg');
+function Banner() {
+  const [bannerUrl, setBannerUrl] = useState(process.env.PUBLIC_URL + '/banner1.png');
   const fileInputRef = useRef(null);
 
   const handleBannerChange = (e) => {
@@ -17,9 +17,6 @@ function Header() {
 
   return (
     <div style={{ background: '#fff', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
-      <div style={{ height: 100, display: 'flex', alignItems: 'center', position: 'relative' }}>
-        <img src={process.env.PUBLIC_URL + '/image.png'} alt="Logo" style={{ height: 60, marginLeft: 24, zIndex: 2 }} />
-      </div>
       <div style={{ position: 'relative', width: '100%', height: 180, background: '#eee', overflow: 'hidden' }}>
         <img
           src={bannerUrl}
@@ -46,4 +43,4 @@ function Header() {
   );
 }
 
-export default Header; 
+export default Banner; 

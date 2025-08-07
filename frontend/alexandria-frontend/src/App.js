@@ -12,6 +12,7 @@ import MainSection1 from './mentee-components/MainSection';
 import MentorProfilePage from './mentee-components/MentorProfilePage.js';
 
 import LoginPage from "./login.js"
+import Banner from './components/Banner';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
@@ -133,20 +134,33 @@ function App() {
       <Routes>
         {/* login page */}
         <Route path="/" element={<LoginPage />} />
+        
         {/* Mentee static pages */}
         <Route
           path="/mentee/Ariana Grande"
-          element={<MenteeProfilePage mentee={mentee1} />}
+          element={
+            <>
+            <Banner />
+            <MenteeProfilePage mentee={mentee1} />
+            </>
+          }
         />
         <Route
           path="/mentee/Alex Hamilton"
-          element={<MenteeProfilePage mentee={mentee2} />}
+          element={
+            <>
+            <Banner />
+            <MenteeProfilePage mentee={mentee2} />
+            </>
+          }
         />
 
         {/* Mentee profile page - pov */}
         <Route
             path="/mentee/arianagrande"
             element={
+              <>
+              <Banner/>
               <div className="container">
                 <ProfileHeader1 />
                 <div className="main-content">
@@ -154,6 +168,7 @@ function App() {
                   <MainSection1 />
                 </div>
               </div>
+              </>
             }
           />
 
@@ -161,6 +176,8 @@ function App() {
         <Route
           path="/mentor/theweeknd"
           element={
+            <>
+            <Banner/>
             <div className="container">
               <ProfileHeader />
               <div className="main-content">
@@ -168,13 +185,20 @@ function App() {
                 <MainSection />
               </div>
             </div>
+            </>
           }
+          
         />
 
         {/* mentor static page */}
         <Route
           path="/mentor/The weeknd"
-          element={<MentorProfilePage mentor={mentor1} />}
+          element={
+            <>
+            <Banner />
+            <MentorProfilePage mentor={mentor1} />
+            </>
+          }
         />
 
       </Routes>

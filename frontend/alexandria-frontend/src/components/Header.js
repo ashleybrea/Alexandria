@@ -1,26 +1,26 @@
 import React, { useRef, useState } from 'react';
 
 function Header() {
-  const [bannerUrl, setBannerUrl] = useState(process.env.PUBLIC_URL + '/banner.png');
-  const fileInputRef = useRef(null);
+  // const [bannerUrl, setBannerUrl] = useState(process.env.PUBLIC_URL + '/banner.png');
+  // const fileInputRef = useRef(null);
 
-  const handleBannerChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setBannerUrl(event.target.result);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  // const handleBannerChange = (e) => {
+  //   const file = e.target.files[0];
+  //   if (file) {
+  //     const reader = new FileReader();
+  //     reader.onload = (event) => {
+  //       setBannerUrl(event.target.result);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
   return (
     <div style={{ background: '#fff', boxShadow: '0 2px 10px rgba(0,0,0,0.05)' }}>
       <div style={{ height: 100, display: 'flex', alignItems: 'center', position: 'relative' }}>
         <img src={process.env.PUBLIC_URL + '/image.png'} alt="Logo" style={{ height: 60, marginLeft: 24, zIndex: 2 }} />
       </div>
-      <div style={{ position: 'relative', width: '100%', height: 180, background: '#eee', overflow: 'hidden' }}>
+      {/* <div style={{ position: 'relative', width: '100%', height: 180, background: '#eee', overflow: 'hidden' }}>
         <img
           src={bannerUrl}
           alt="Banner"
@@ -41,7 +41,7 @@ function Header() {
           style={{ display: 'none' }}
           onChange={handleBannerChange}
         />
-      </div>
+      </div> */}
     </div>
   );
 }
