@@ -25,8 +25,10 @@ function LoginPage() {
   return (
     <div className="login-page">
       <div className="container-login">
-        <h2>Log in</h2>
-        <p>Welcome to Alexandria!</p>
+        <h2>Welcome to Alexandria!</h2>
+        <br />
+        <p>Log in to connect with great minds</p>
+        <br />
         <form onSubmit={handleSubmit}>
           <div className="input-group">
             <input
